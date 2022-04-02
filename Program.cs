@@ -11,7 +11,6 @@ namespace Двумерный_массив
             int startRandom = 0;
             int stopRandom = 10;
             int[,] twoMassiv = new int[5,6];
-            int u = twoMassiv.Rank;
 
             for (int i = 0; i < twoMassiv.GetLength(0);i++)
             {
@@ -30,8 +29,7 @@ namespace Двумерный_массив
 
                 Console.Write("\n");
             }
-            Console.WriteLine(u);
-           // Console.WriteLine(y);
+
             Console.ReadLine();
         }
     }
