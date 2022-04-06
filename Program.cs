@@ -14,6 +14,7 @@ namespace Двумерный_массив
 
             for (int i = 0; i < twoMassiv.GetLength(0);i++)
             {
+
                 for(int ii=0;ii<twoMassiv.GetLength(1);ii++)
                 {
                     twoMassiv[i, ii] = randomNumber.Next(startRandom, stopRandom);
@@ -22,6 +23,7 @@ namespace Двумерный_массив
 
             for (int i = 0; i < twoMassiv.GetLength(0); i++)
             {
+
                 for (int ii = 0; ii < twoMassiv.GetLength(1); ii++)
                 {
                     Console.Write(twoMassiv[i,ii]+" ");
