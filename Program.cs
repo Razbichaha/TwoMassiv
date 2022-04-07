@@ -7,19 +7,19 @@ namespace Двумерный_массив
     {
         static void Main(string[] args)
         {
-            Random randomNumber = new Random();
-            int startRandom = 0;
-            int stopRandom = 10;
-            int Line = 4;
-            int column = 3;
-            int[,] twoMassiv = new int[Line,column];
+            Random random = new Random();
+            int minRandom = 0;
+            int maxRandom = 10;
+            int line = 5;
+            int column = 6;
+            int[,] twoMassiv = new int[line,column];
 
             for (int i = 0; i < twoMassiv.GetLength(0);i++)
             {
 
                 for(int ii=0;ii<twoMassiv.GetLength(1);ii++)
                 {
-                    twoMassiv[i, ii] = randomNumber.Next(startRandom, stopRandom);
+                    twoMassiv[i, ii] = random.Next(minRandom, maxRandom);
                 }
             }
 
@@ -34,24 +34,24 @@ namespace Двумерный_массив
                 Console.Write("\n");
             }
 
-            int tempValue = 0;
+            int sum = 0;
             int stringPointer = 1;
 
             for(int i=0;i< twoMassiv.GetLength(stringPointer);i++)
             {
-                tempValue += twoMassiv[stringPointer,i];
+                sum += twoMassiv[stringPointer,i];
             }
 
-            Console.Write("Сумма второй строки = " + tempValue + "\n");
+            Console.Write("Сумма второй строки = " + sum + "\n");
             int columnPointer = 0;
-            tempValue = 1;
+            int multiplication = 1;
 
             for (int i = 0; i < twoMassiv.GetLength(columnPointer); i++)
             {
-                tempValue *= twoMassiv[i, columnPointer];
+                multiplication *= twoMassiv[i, columnPointer];
             }
 
-            Console.Write("Произведение первого столбца = " + tempValue + "\n");
+            Console.Write("Произведение первого столбца = " + multiplication + "\n");
             Console.ReadLine();
         }
     }
