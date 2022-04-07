@@ -34,24 +34,24 @@ namespace Двумерный_массив
                 Console.Write("\n");
             }
 
-            int temp = 0;
+            int tempValue = 0;
             int stringPointer = 1;
 
             for(int i=0;i< twoMassiv.GetLength(stringPointer);i++)
             {
-                temp += twoMassiv[stringPointer,i];
+                tempValue += twoMassiv[stringPointer,i];
             }
 
-            Console.Write("Сумма второй строки = " + temp + "\n");
+            Console.Write("Сумма второй строки = " + tempValue + "\n");
             int columnPointer = 0;
-            temp = 1;
+            tempValue = 1;
 
-            for (int i = 0; i < twoMassiv.GetLength(columnPointer); i++)//\\\\\\\\\\\\\\\\\\
+            for (int i = 0; i < twoMassiv.GetLength(columnPointer); i++)
             {
-                temp *= twoMassiv[i, columnPointer];
+                tempValue *= twoMassiv[i, columnPointer];
             }
 
-            Console.Write("Произведение первого столбца = " + temp + "\n");
+            Console.Write("Произведение первого столбца = " + tempValue + "\n");
             Console.ReadLine();
         }
     }
